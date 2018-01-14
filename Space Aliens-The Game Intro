@@ -11,7 +11,7 @@ def control_room():
             continue
 
         if playerInput=="3":
-            print("You walk over to the star chart. It says that you are in the milky way galaxy.")
+            print("You walk over to the star chart. It says the ship is currently in the Alpha Centauri star system and about 0.1 light years from Proxima Centauri b.")
             continue
 
         if playerInput=="1":
