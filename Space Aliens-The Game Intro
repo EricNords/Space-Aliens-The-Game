@@ -70,6 +70,8 @@ while True:
     
     print("Ready to Play? (y/n)")
     playerInput=input()
+    
+    playerInput = playerInput.lower()
 
     if "n" in playerInput:
         continue
