@@ -97,7 +97,7 @@ if playerInput=="1":
     time.sleep(1.4)
     print("***2 minutes later***\n")
     time.sleep(1)
-    print("As you walk through the engine rooms blast door, the sounds of tearing of metal and depressurization alarms rip through the air.  \nYour training tells you that none of these sounds are positive.\n")
+    print("As you walk through the engine room's blast door, the sounds of tearing of metal and depressurization alarms rip through the air.  \nYour training tells you that none of these sounds are positive.\n")
 
     print("If you do not make a decision quickly, you have a high likelyhood of being sucked out into space!!")
     print(" 1) Run out of the engine room and shut the blast door. \n 2) Run into the engine room. \n 3) Ignore it. These things malfunction occasionaly. \n (Answer 1,2 or 3)")
