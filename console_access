@@ -12,7 +12,8 @@ def console_access():
     print("\n ** You go the the security camera panel. ** ")
     
     time.sleep(3)
-    print("\nThese things are aliens!? How can things get any worse? \n ** You look at security camera live footage. ** ")
+    print("\nThese things are aliens!? How can things get any worse?")
+    print("\n** You look at security camera live footage. ** ")
     
     time.sleep(2)
     print("\nOh no. There are still people on this ship!")
