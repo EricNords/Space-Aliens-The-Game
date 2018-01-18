@@ -7,7 +7,7 @@ def user_leaves():
     time.sleep(1)
 
     print("** You start creeping out, into the hallway. You hear sounds of the aliens right behind you. **\n")
-    time.sleep(1)
+    time.sleep(2)
     print("** You keep walking as silently as possible until you see the escape pods, then you break into a dash to get to the escape pod quicker. ** \n")
     time.sleep(1)
     print("** You accidentally kick a piece of scrap metal on the floor, creating a really loud noise that attracts the aliens. ** \n")
@@ -20,7 +20,7 @@ def user_leaves():
     time.sleep(1)
     print("\n** Something along the lines of slime drips onto your shoulder. ** ")
     time.sleep(1)
-    print("** You look into the window and see a reflection. You turn around. **")
+    print("\n** You look into the window and see a reflection. You turn around. **")
     time.sleep(1)
     print("\nHoly mother of go-")
 
