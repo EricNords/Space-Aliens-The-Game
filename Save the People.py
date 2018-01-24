@@ -344,9 +344,10 @@ else:
     playerInput==input()
 
     if playerInput=="1":
+        civs_saved+=10
         print("You decide to stay behind.")
         time.sleep(1)
-        print("You saved " + civs_saved+=10 + "people.")
+        print("You saved " + str(civs_saved) + "people.")
         time.sleep(1)
         print(".___________. __    __       ___      .__   __.  __  ___      _______.    _______   ______   .______         .______    __          ___   ____    ____  __  .__   __.   _______ ")
         print("|           ||  |  |  |     /   \     |  \ |  | |  |/  /     /       |   |   ____| /  __  \  |   _  \        |   _  \  |  |        /   \  \   \  /   / |  | |  \ |  |  /  _____|")
@@ -357,11 +358,11 @@ else:
         print("                                                                                                                                                                                ")
         
     if playerInput=="2":
+        civs_saved+=9
         print("You throw JIM out of the escape pod.\n This is what you get for stealing my orange juice!")
         print("The escape pod ejects from the ship.")
         time.sleep(1)
-        print("You saved " + civs_saved+=9 + "people.")
-        print("You saved " + civs_saved+=10 + "people.")
+        print("You saved " + str(civs_saved) + "people.")
         time.sleep(1)
         print(".___________. __    __       ___      .__   __.  __  ___      _______.    _______   ______   .______         .______    __          ___   ____    ____  __  .__   __.   _______ ")
         print("|           ||  |  |  |     /   \     |  \ |  | |  |/  /     /       |   |   ____| /  __  \  |   _  \        |   _  \  |  |        /   \  \   \  /   / |  | |  \ |  |  /  _____|")
