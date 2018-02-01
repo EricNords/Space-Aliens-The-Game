@@ -3,7 +3,7 @@ import random
 import sys
 
 def control_room():
-    print("As you enter the bridge, you look around you see the main control panel, the bridge fridge, the star chart.\nHowever, the captain and bridge crew are no where to be seen.\n")
+    print("As you enter the bridge, you look around you see the main control panel, the bridge fridge and the star chart.\nHowever, the captain and bridge crew are no where to be seen.\n")
 
     while True:
         print("What do you do?")
@@ -27,7 +27,6 @@ def console_riddle():
     print("Welcome.")
     print("Please follow the following riddle access the control panel.\n")
 
-    import time
     time.sleep(1)
 
     print("This thing all things devours:")
@@ -35,7 +34,7 @@ def console_riddle():
     print("Gnaws iron, bites steel;")
     print("Grinds hard stones to meal;")
     print("Slays king, ruins town,")
-    print("And beats high mountain down.")  
+    print("And beats high mountain down.\n")  
 
     for i in range(3, 0, -1):
         time.sleep(1)
@@ -81,6 +80,7 @@ def console_access():
     
     time.sleep(3)
     print("\nThese things are aliens!? How can this day get any worse?")
+    time.sleep(1)
     print("\n** You look at security camera live footage. ** ")
     
     time.sleep(2)
@@ -91,9 +91,9 @@ def console_access():
 
 
 def user_leaves():
-    import time
 
     print("No! I can't do anything for them at this point! It's too risky to do anything that rash at this time!")
+    time.sleep(1)
     print("I need to get out of here as fast as possible!")
 
     time.sleep(1)
@@ -115,10 +115,18 @@ def user_leaves():
     print("\n** You look into the window and see a reflection. You turn around. **")
     time.sleep(1)
     print("\nHoly mother of go-")
-
     time.sleep(2)
+    print("You were eaten by the alien.")
+    time.sleep(1)
+    print("____    ____  ______    __    __      __        ______        _______. _______ ")
+    print("\   \  /   / /  __  \  |  |  |  |    |  |      /  __  \      /       ||   ____|")
+    print(" \   \/   / |  |  |  | |  |  |  |    |  |     |  |  |  |    |   (----`|  |__   ")
+    print("  \_    _/  |  |  |  | |  |  |  |    |  |     |  |  |  |     \   \    |   __|  ")
+    print("    |  |    |  `--'  | |  `--'  |    |  `----.|  `--'  | .----)   |   |  |____ ")
+    print("    |__|     \______/   \______/     |_______| \______/  |_______/    |_______|")
+    sys.exit()
 
-    print("\nGame over.")
+    
 
 
 def fight_choice(attack, health, reload):
@@ -135,6 +143,8 @@ def fight_choice(attack, health, reload):
 
     if "flee" in player_choice and flee_chance % 2 == 0:
         print("** You ran away! **")
+        fled = 0
+        return fled
 
     elif "flee" in player_choice and flee_chance % 2 != 0:
         print("** Failed to flee! **")
@@ -190,11 +200,13 @@ def combat_system(attack, health, reload):
         if alien_hitchance % 2 >= 1 and health > 0:
             print("\n** The alien hits you for " + str(alien_attack) + " damage. **")
             health -= alien_attack
+            print("You have " + str(health) + " HP left.")
                     
             if health > 0:
                 continue
                 
             elif health <= 0:
+                print("You were killed by the alien.")
                 print("____    ____  ______    __    __      __        ______        _______. _______ ")
                 print("\   \  /   / /  __  \  |  |  |  |    |  |      /  __  \      /       ||   ____|")
                 print(" \   \/   / |  |  |  | |  |  |  |    |  |     |  |  |  |    |   (----`|  |__   ")
@@ -293,7 +305,7 @@ def door_code():
                 print("Code Restored.\nDoor Opening.")
                 break
             else:
-                chances-=chances
+                chances-=1
                 print("Error: "+str(chances)+" left")
                 
                 print("You failed to fix the door.")
@@ -327,14 +339,14 @@ def weapon_choice():
             print("\nYou have chosen the plasma rifle.")
             player_health = random.randint(100, 150)
             player_attack = random.randint(25, 100)
-            player_rechargeTime = 4
+            player_rechargeTime = 2.5
             break
 
         if "l" in weapon_choice:
             print("\nYou have chosen the live ammo rifle.")
             player_health = random.randint(50, 100)
             player_attack = random.randint(75, 150)
-            player_rechargeTime = 2
+            player_rechargeTime = 1.5
             break
 
         else:
@@ -416,15 +428,14 @@ while True:
     elif "y" in playerInput:
         break
 
-import time
-
 time.sleep(1)
         
 #-----------------------------------------------------------------------------------------Start of Game-----------------------------------------------------------------------------------------
 
 print("You wake to see the green glow of your alarm clock, it is almost time to get to your station.\nYou are an engineer on the spaceship Lambent Light, your job is to make sure the ships fusion drive runs smoothly.")
+time.sleep(1)
 print("However, as you leave your cabin and begin to walk to your station, you notice that something is wrong...\nThe regular hustle and bustle of a ship is no where to be found.\nWhere are all of the people?\n")
-
+time.sleep(1)
 print("What do you do?")
 
 print(" 1) Walk to your station.\n 2) Walk to the bridge. \n (Answer 1 or 2)")
@@ -452,7 +463,7 @@ if playerInput=="1":
 
     elif playerInput== "2" or "3":
         time.sleep(1)
-        print("Time seems to slow down as the wall in front of you buckles and tears open. You are sucked into the endless void known as space, never to be seen again")
+        print("Time seems to slow down as the wall in front of you buckles and tears open. You are sucked into the endless void known as space, never to be seen again.")
         time.sleep(1)
         print("____    ____  ______    __    __      __        ______        _______. _______ ")
         print("\   \  /   / /  __  \  |  |  |  |    |  |      /  __  \      /       ||   ____|")
@@ -509,7 +520,7 @@ elif playerInput == "n":
 time.sleep(1)        
 print("You leave the bridge and begin to walk towards the location of the surviving crew.")
 time.sleep(1)
-print("Soon you reach an intersection. You peer around the corner to see two aliens!\nThey both seem to have some sort of weapon, however, you cannot tell what it is.")
+print("Soon you reach an intersection. You peer around the corner to see an alien!\nThey both seem to have some sort of weapon, however, you cannot tell what it is.")
 time.sleep(2)
 print("Do you want to:\n 1) Try to sneak past them.\n 2) Attack them.\n (Answer 1 or 2)")
 playerInput=input()
@@ -538,6 +549,7 @@ time.sleep(1)
 print("**Error Section of Software Deleted**")
 time.sleep(1)
 print("The only way to get through the door is to fix the software.\nLet's see what the problem is.")
+time.sleep(1)
 print("**Fill in the underline(_____) with the correct code.**\n")
 time.sleep(1)
 door_code()
@@ -549,6 +561,7 @@ playerInput=input()
 
 if playerInput=="y":
     print("You access the console to open the door.\n However, you see a similar problem as the previous door that let you have access to the cabin you are currently in.")
+    time.sleep(1)
     print("You will have to fix the code.")
     print("**Fill in the underline(_____) with the correct code.**\n")
     time.sleep(1)
@@ -558,6 +571,44 @@ if playerInput=="y":
     
 else:
     print("You decide to leave the man behind.\n He bangs on the door to get your attention, but you just continue on.")
+
+print("You exit the room.")
+time.sleep(1)
+print("As you walk down the hallway you hear someone scream for help.")
+time.sleep(1)
+print("Do you go and help the person? (y/n)")
+
+playerInput=input()
+playerInput=playerInput.lower()
+
+if playerInput=="y":
+    print("You decide to go towards the screaming person.")
+    time.sleep(1)
+    print("After running down the hallway, you turn the corner and see an alien advancing on one of your crewmates.")
+    time.sleep(1)
+    print("Save the person? (y/n)")
+
+    playerInput=input()
+    playerInput=playerInput.lower()
+
+    if playerInput=="y":
+        fled = fight_choice(player_attack, player_health, player_rechargeTime)
+
+        if fled==0:
+            print("You decide that the you shouldn't waste you energy saving 1 person.")
+
+        else:
+            print("The crewmate you saved thanks you.")
+            time.sleep(1)
+            print("You tell the person to get to an escape pod.")
+            civs_saved+=1
+
+    else:
+        print("You decide that the you shouldn't waste you energy saving 1 person.")
+
+else:
+    print("You decide that the you shouldn't waste you energy saving 1 person.")
+    
 
 print("You continue on to the brig.")
 time.sleep(1.5)
