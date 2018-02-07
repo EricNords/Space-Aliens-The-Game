@@ -12,13 +12,15 @@ def control_room():
 
         if playerInput=="2":
             print("You look in the fridge. The only contents are some old bottles of space milk.")
+            time.sleep(1)
             continue
 
         if playerInput=="3":
             print("You walk over to the star chart. It says the ship is currently in the Alpha Centauri star system and about 0.1 light years from Proxima Centauri b.")
+            time.sleep(1)
             continue
 
-        if playerInput=="1":
+        else:
             break
     
 
@@ -247,16 +249,21 @@ def door_code():
             else:
                 chances-=1
                 print("Error: "+str(chances)+" chances left")
+                continue
 
-                print("You failed to fix the door.")
-                print("____    ____  ______    __    __      __        ______        _______. _______ ")
-                print("\   \  /   / /  __  \  |  |  |  |    |  |      /  __  \      /       ||   ____|")
-                print(" \   \/   / |  |  |  | |  |  |  |    |  |     |  |  |  |    |   (----`|  |__   ")
-                print("  \_    _/  |  |  |  | |  |  |  |    |  |     |  |  |  |     \   \    |   __|  ")
-                print("    |  |    |  `--'  | |  `--'  |    |  `----.|  `--'  | .----)   |   |  |____ ")
-                print("    |__|     \______/   \______/     |_______| \______/  |_______/    |_______|")
-                sys.exit()
+        if chances==0:    
+            print("You failed to fix the door.")
+            print("____    ____  ______    __    __      __        ______        _______. _______ ")
+            print("\   \  /   / /  __  \  |  |  |  |    |  |      /  __  \      /       ||   ____|")
+            print(" \   \/   / |  |  |  | |  |  |  |    |  |     |  |  |  |    |   (----`|  |__   ")
+            print("  \_    _/  |  |  |  | |  |  |  |    |  |     |  |  |  |     \   \    |   __|  ")
+            print("    |  |    |  `--'  | |  `--'  |    |  `----.|  `--'  | .----)   |   |  |____ ")
+            print("    |__|     \______/   \______/     |_______| \______/  |_______/    |_______|")
+            sys.exit()
 
+        else:
+            print("")
+            
         
     elif var==2:
         print("print(""Open Door? (y/n)"")")
@@ -277,15 +284,20 @@ def door_code():
             else:
                 chances-=1
                 print("Error: "+str(chances)+" left")
+                continue
 
-                print("You failed to fix the door.")
-                print("____    ____  ______    __    __      __        ______        _______. _______ ")
-                print("\   \  /   / /  __  \  |  |  |  |    |  |      /  __  \      /       ||   ____|")
-                print(" \   \/   / |  |  |  | |  |  |  |    |  |     |  |  |  |    |   (----`|  |__   ")
-                print("  \_    _/  |  |  |  | |  |  |  |    |  |     |  |  |  |     \   \    |   __|  ")
-                print("    |  |    |  `--'  | |  `--'  |    |  `----.|  `--'  | .----)   |   |  |____ ")
-                print("    |__|     \______/   \______/     |_______| \______/  |_______/    |_______|")
-                sys.exit()
+        if chances==0:     
+            print("You failed to fix the door.")
+            print("____    ____  ______    __    __      __        ______        _______. _______ ")
+            print("\   \  /   / /  __  \  |  |  |  |    |  |      /  __  \      /       ||   ____|")
+            print(" \   \/   / |  |  |  | |  |  |  |    |  |     |  |  |  |    |   (----`|  |__   ")
+            print("  \_    _/  |  |  |  | |  |  |  |    |  |     |  |  |  |     \   \    |   __|  ")
+            print("    |  |    |  `--'  | |  `--'  |    |  `----.|  `--'  | .----)   |   |  |____ ")
+            print("    |__|     \______/   \______/     |_______| \______/  |_______/    |_______|")
+            sys.exit()
+
+        else:
+            print("")
 
         
     elif var==3:
@@ -307,16 +319,22 @@ def door_code():
             else:
                 chances-=1
                 print("Error: "+str(chances)+" left")
-                
-                print("You failed to fix the door.")
-                print("____    ____  ______    __    __      __        ______        _______. _______ ")
-                print("\   \  /   / /  __  \  |  |  |  |    |  |      /  __  \      /       ||   ____|")
-                print(" \   \/   / |  |  |  | |  |  |  |    |  |     |  |  |  |    |   (----`|  |__   ")
-                print("  \_    _/  |  |  |  | |  |  |  |    |  |     |  |  |  |     \   \    |   __|  ")
-                print("    |  |    |  `--'  | |  `--'  |    |  `----.|  `--'  | .----)   |   |  |____ ")
-                print("    |__|     \______/   \______/     |_______| \______/  |_______/    |_______|")
-                sys.exit()
+                continue
+            
+        if chances==0:     
+            print("You failed to fix the door.")
+            print("____    ____  ______    __    __      __        ______        _______. _______ ")
+            print("\   \  /   / /  __  \  |  |  |  |    |  |      /  __  \      /       ||   ____|")
+            print(" \   \/   / |  |  |  | |  |  |  |    |  |     |  |  |  |    |   (----`|  |__   ")
+            print("  \_    _/  |  |  |  | |  |  |  |    |  |     |  |  |  |     \   \    |   __|  ")
+            print("    |  |    |  `--'  | |  `--'  |    |  `----.|  `--'  | .----)   |   |  |____ ")
+            print("    |__|     \______/   \______/     |_______| \______/  |_______/    |_______|")
+            sys.exit()
 
+        else:
+            print("")
+
+            
 def weapon_choice():
     global player_attack
     global player_health
@@ -401,7 +419,7 @@ def control_room_choices():
             time.sleep(1)
             continue
 
-        if playerInput=="4":
+        else:
             time.sleep(1)
             weapon_choice()
             break
@@ -427,6 +445,8 @@ while True:
         continue
     elif "y" in playerInput:
         break
+    else:
+    		continue
 
 time.sleep(1)
         
@@ -475,8 +495,8 @@ if playerInput=="1":
         import sys
         sys.exit()()
 
-if playerInput=="2":
-    print("You walk to the bridge.\n")
+else:
+    print("You decide walk to the bridge.\n")
     time.sleep(1)
     control_room()
 
@@ -512,7 +532,7 @@ if playerInput=="y":
         player_health = random.randint(30, 50)
         player_attack = random.randint(1, 10)
         player_rechargeTime = 0
-elif playerInput == "n":
+else:
     user_leaves()
 
 
@@ -532,7 +552,7 @@ if playerInput=="1":
     time.sleep(1)
     print("However, as you continue down the hallway, you reach a malfunctioning blast door.\nAbove it, is a sign reading *Bridge Crew Cabins*\nThe only way to continue is to fix the door.")
 
-if playerInput=="2":
+else:
     fight_choice(player_attack, player_health, player_rechargeTime)
     print("You continue down the hallway.")
     
@@ -543,6 +563,8 @@ while True:
         continue
     if playerInput=="y":
         break
+    else:
+    		continue
 
 print("As you look at the console, an alert pops up on the screen.")
 time.sleep(1)
@@ -627,7 +649,14 @@ if playerInput=="1":
     
 else:
     print("You decide to fight the alien.")
-    fight_choice(player_attack, player_health, player_rechargeTime)
+    fled=fight_choice(player_attack, player_health, player_rechargeTime)
+
+    if fled==0:
+        user_leaves()
+
+    else:
+        print("")
+        
 
     print("You go to open the door... it doesn't open.")
     time.sleep(1)
@@ -666,7 +695,7 @@ else:
         time.sleep(1)
         print("The escape pod ejects from the ship.")
         time.sleep(1)
-        print("You saved " + str(civs_saved - 1) + " people.")
+        print("You saved " + str(civs_saved) + " people.")
         time.sleep(1)
         print(".___________. __    __       ___      .__   __.  __  ___      _______.    _______   ______   .______         .______    __          ___   ____    ____  __  .__   __.   _______ ")
         print("|           ||  |  |  |     /   \     |  \ |  | |  |/  /     /       |   |   ____| /  __  \  |   _  \        |   _  \  |  |        /   \  \   \  /   / |  | |  \ |  |  /  _____|")
